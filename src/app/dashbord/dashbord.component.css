@@ -1,0 +1,12 @@
+.center {
+  position: absolute; /* Position the container element */
+  top: 50%; /* Center the container element vertically */
+  left: 50%; /* Center the container element horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position of the container element */
+  display: flex; /* Use flexbox layout to center the buttons */
+  justify-content:center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  width: 80px; /* Increase the width of the button */
+  height: 30px; /* Increase the height of the button */
+
+  }

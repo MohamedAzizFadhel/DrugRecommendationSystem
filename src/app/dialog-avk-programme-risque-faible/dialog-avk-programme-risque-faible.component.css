@@ -1,0 +1,10 @@
+.resized-dialog {
+    width: 800px;
+    height: 600px;
+    
+ }
+.resized-button{
+    width: 500px;
+    height: 350px;
+    white-space: pre-wrap;
+}

@@ -1,0 +1,94 @@
+<!--input type="text" #box (keyup)=getvalue(box.value) placeholder="ENTER ID" name="ID_PATIENT">
+<p>ID_PATIENT: {{Id}}</p-->
+<!--div class="center"-->
+<!--*<input type="file" (change)="ReadExcel($event)">-->
+<!--mat-tree [dataSource]="dataSource" [treeControl]="treeControl"-->
+  <!-- This is the tree node template for leaf nodes -->
+  <!--mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding-->
+    <!-- use a disabled button to provide padding for tree leaf>
+    <button mat-icon-button disabled></button>
+    {{node.name}}
+  </mat-tree-node>
+  <This is the tree node template for expandable nodes>
+  <mat-tree-node *matTreeNodeDef="let node;when:hasChild" matTreeNodePadding>
+    <button (click)="rec(node.name)" mat-icon-button matTreeNodeToggle [attr.atria-lavel]="'Toggle'+'node.name'">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    {{node.name}}
+  </mat-tree-node>
+</mat-tree>
+</div>
+<div style=" margin: auto; width: 50%;">
+  <button (click)='savedata()'>SAVE</button>
+</div>
+
+<table id="excel-table">
+  <tr>
+    <th>Id</th>
+    <th>Décision</th>
+  </tr>
+  <tr>
+    <td>{{Id}}</td>
+    <td>{{displayval}}</td>
+  </tr>
+</table>
+<div style=" margin: auto; width: 50%;">
+  <button (click)='exportexcel()'>Export Excel</button>
+</div-->
+
+
+<html>
+<head>
+  <title>Welcome Page</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .acronym {
+      font-size: 50px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      color: #2C2B2B;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 70px;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .references {
+    padding: 10px;
+    background-color: lightgray;
+    overflow: auto;
+  }
+
+  .reference {
+    width: 33%;
+    float: left;
+    margin-bottom: 5px;
+  }
+
+  .reference h3 {
+    margin-bottom: 1px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="acronym">GEST-AC-AAP</div>
+  </div>
+</body>
+</html>
+<div class="center">
+
+  <button mat-raised-button (click)="openDialog()">AVK</button>
+  <button mat-raised-button (click)="openDialog1()">AOD</button>
+  <button mat-raised-button (click)="openDialog2()">AAP</button>
+</div>
+  
